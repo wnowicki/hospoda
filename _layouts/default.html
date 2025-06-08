@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% seo %} <!-- jekyll-seo-tag dopełni resztę meta‑tagów -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/feed.xml' | relative_url }}" />
+  </head>
+  <body>
+    <main>
+      {{ content }}
+    </main>
+    <footer class="footer">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+  </body>
+</html>

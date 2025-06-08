@@ -1,0 +1,30 @@
+---
+layout: default
+title: "Zostań z nami - startujemy już wkrótce!"
+permalink: "/"
+---
+
+<section class="hero">
+  <h1 class="hero__title">{{ site.title }}</h1>
+  <p class="hero__lead">Nasz podcast startuje w najbliższym czasie. Zapisz się, aby otrzymywać powiadomienia o premierze i nowych odcinkach!</p>
+
+  <form class="hero__form" action="https://example.com/subscribe" method="POST">
+    <label for="email" class="visually-hidden">Twój adres e-mail</label>
+    <input id="email" name="email" type="email" placeholder="Adres e-mail" required />
+    <button type="submit">Powiadom mnie</button>
+  </form>
+</section>
+
+{% if site.posts.size != 0 %}
+<section class="updates">
+  <h2 class="updates__title">Aktualizacje</h2>
+    <ul class="updates__list">
+      {% for post in site.posts limit:5 %}
+        <li>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d.%m.%Y' }}</time>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
