@@ -11,6 +11,16 @@ body {
 }
 .hero {
   display: flex; flex-direction: column; align-items: center; text-align: center; padding: 4rem 1rem;
+  color: #fff;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0)), url('../img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* You might want to add a min-height or padding to ensure the hero section is visible */
+  /* For example: */
+  /* min-height: 400px; */
+  /* padding: 50px 0; */
+
 }
 .hero__title {font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 1rem;}
 .hero__lead {font-size: 1.125rem; max-width: 45ch; margin-bottom: 2rem;}
