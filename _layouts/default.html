@@ -15,9 +15,12 @@
     {% endif %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% seo %} <!-- jekyll-seo-tag dopełni resztę meta‑tagów -->
+    {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/feed.xml' | relative_url }}" />
+    <meta property="og:image" content="{{ '/assets/images/header.jpg' | relative_url | prepend: site.baseurl }}">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/370a0cb679.js" crossorigin="anonymous"></script>
     <!-- MailerLite Universal -->
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
@@ -33,6 +36,55 @@
       {{ content }}
     </main>
     <footer class="footer">
+      <div class="social-links">
+        {% if site.social %}
+          {% if site.social.spotify %}
+            <a href="{{ site.social.spotify }}" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+              <i class="fab fa-spotify"></i>
+            </a>
+          {% endif %}
+          {% if site.social.apple_podcasts %}
+            <a href="{{ site.social.apple_podcasts }}" target="_blank" rel="noopener noreferrer" aria-label="Apple Podcasts">
+              <i class="fab fa-apple"></i>
+            </a>
+          {% endif %}
+          {% if site.social.google_podcasts %}
+            <a href="{{ site.social.google_podcasts }}" target="_blank" rel="noopener noreferrer" aria-label="Google Podcasts">
+              <i class="fab fa-google"></i>
+            </a>
+          {% endif %}
+          {% if site.social.youtube %}
+            <a href="{{ site.social.youtube }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          {% endif %}
+          {% if site.social.bsky %}
+            <a href="{{ site.social.bsky }}" target="_blank" rel="noopener noreferrer" aria-label="Bluesky">
+              <i class="fa-brands fa-bluesky"></i>
+            </a>
+          {% endif %}
+          {% if site.social.twitter %}
+            <a href="{{ site.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+          {% endif %}
+          {% if site.social.linkedin %}
+            <a href="{{ site.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          {% endif %}
+          {% if site.social.github %}
+            <a href="{{ site.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          {% endif %}
+          {% if site.social.rss %}
+            <a href="{{ '/feed.xml' | relative_url }}" target="_blank" rel="noopener noreferrer" aria-label="RSS Feed">
+              <i class="fas fa-rss"></i>
+            </a>
+          {% endif %}
+        {% endif %}
+      </div>
       <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Wszelkie prawa zastrzeżone.</p>
     </footer>
   </body>
