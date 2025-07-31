@@ -3,7 +3,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Spotkania przy mikrofonie niczym przy piwie w czeskiej hospodzie: konkret, praktyka, zero zadęcia. Rozmowy o IT, zarządzaniu, strategii, produktach, startupach i wszystkim, co dzieje się między deployem a KPI. Dla liderów technicznych, product ownerów i wszystkich, którzy łączą kod z biznesem.
 locale: "pl_PL"
 baseurl: ""
-url: "https://hsopoda.tech"   # zmień na docelową domenę
+url: "https://hospoda.tech"   # zmień na docelową domenę
 theme: null                     # custom layout
 plugins:
   - jekyll-feed                # RSS/Atom
