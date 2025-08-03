@@ -15,10 +15,10 @@ permalink: pretty
 social:
   spotify: "https://open.spotify.com/show/63rDHoShb9uyRFW9oBLTBQ?si=S4mDfmdMTP6zPrUrMJJcwA"
   apple_podcasts: "https://podcasts.apple.com/pl/podcast/hospoda-tech/id1829767915"  # Replace with your Apple Podcasts URL
-  # google_podcasts: "https://podcasts.google.com/feed/your-feed"  # Replace with your Google Podcasts URL
   youtube: "https://youtube.com/@HospodaTech"  # Replace with your YouTube channel
   bsky: "https://bsky.app/profile/hospoda.tech"  # Replace with your Bluesky profile
-  # twitter: "https://twitter.com/your-handle"  # Replace with your Twitter handle
+  twitter: "https://x.com/HospodaTech"  # Replace with your Twitter handle
+  facebook: "https://www.facebook.com/HospodaTech"  # Replace with your Facebook page
   # linkedin: "https://linkedin.com/in/your-profile"  # Replace with your LinkedIn profile
   # github: "https://github.com/your-username"  # Replace with your GitHub profile
   # rss: true  # This will show RSS feed link using /feed.xml
