@@ -1,38 +1,82 @@
 ---
 layout: default
 ---
-<article class="post">
-  {%- if page.image -%}
-    <div class="featuredImage">
-        <img src="{{ '/assets/img/' | append: page.image | relative_url }}" alt="" />
-      </div>
-  {%- endif -%}
-  <header>
-    <h1 class="postTitle">{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: '%B %d, %Y' }} | <span class="time">{{ page.content | number_of_words | divided_by:180 }}</span> Minute Read</p>
-  </header>
 
-  {{ content }}
+<!-- Post Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}{% if page.heading_image %}{{page.heading_image}}{% else %}{{ site.default_background }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}unknown author{% endif %} on {{ page.date | date: "%B %-d, %Y" }} in {{ page.categories| first | capitalize}} &middot; {% include read_time.html content=page.content %}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
-  <!-- POST NAVIGATION -->
-  <footer class="postNav clearfix">
-    {%- if page.previous.url -%}
-      <a class="prev{% if page.previous.image %} image{% endif %}" href="{{ page.previous.url | relative_url }}"><span>&laquo;&nbsp;{{ page.previous.title }}</span>
-      {%- if page.previous.image -%}
-        <img src="{{ '/assets/img/' |  append: page.previous.image | relative_url }}" alt="">
-      {%- endif -%}
-    </a>
-    {%- endif -%}
-    {%- if page.next.url -%}
-      <a class="next{% if page.next.image %} image{% endif %}" href="{{ page.next.url | relative_url }}"><span>{{ page.next.title }}&nbsp;&raquo;</span>
-      {%- if page.next.image -%}
-        <img src="{{ '/assets/img/' | append: page.next.image | relative_url }}" alt="">
-      {%- endif -%}
-      </a>
-    {%- endif -%}
-  </footer>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            {% if page.toc %}
+            <div class="hidden-lg col-sm-12 col-md-offset-1 col-md-10 hidden-print">
+              <div class="toc">
+                  <h4>Table of Contents</h4>
+                  {{ content | toc_only }}
+              </div>
+              <hr>
+            </div>
+            {% endif %}
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                {% if page.spotify.id %}
+                    {% include spotify.html id=page.spotify.id %}
+                {% endif %}
+
+                {{ content }}
+
+                <hr>
+                <ul class="list-inline"><li>Category:</li><li><a href="{{ site.baseurl }}/blog/categories/{{ page.categories | first }}"><strong>{{ page.categories | first | capitalize }}</strong></a></li></ul>
+                {% if page.tags.size > 0 %}
+                <ul class="list-inline">
+                    <li>Tags:</li>
+                    {% for tag in page.tags %}
+                        <li><span class="label label-default"><a href="{{ site.baseurl }}/blog/tags/{{ tag }}">#{{ tag }} ({{ site.tags[tag]|size  }})</a></span></li>
+                        <!-- <li><a href="/blog/tags#{{ tag }}" class="btn btn-default btn-xs">{{ tag }} <span class="badge">{{ site.tags[tag]|size  }}</span></a></li> -->
+                    {% endfor %}
+                </ul>
+                {% endif %}
+
+                <ul class="pager hidden-print">
+                    {% if page.previous.url %}
+                    <li class="previous">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                    </li>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <li class="next">
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+
+            </div>
+            {% if page.toc %}
+            <div class="col-lg-2 hidden-xs hidden-sm hidden-md">
+                <div class="toc">
+                    <h4>Table of Contents</h4>
+                    {{ content | toc_only }}
+                </div>
+            </div>
+            {% endif %}
+
+        </div>
+    </div>
 </article>
 
-{%- if site.disqus.shortname -%}
-  {%- include disqus_comments.html -%}
-{%- endif -%}
+<hr>

@@ -1,61 +1,130 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Hospoda.tech
-email: wnowicki@me.com
+title: Hospoda.Tech
+subtitle: Podcast o IT, zarządzaniu i biznesie
+email: kontakt@hospoda.tech
+author:
+  name: Wojciech Nowicki
+  url: https://wojciechnowicki.com
+  twitter: wonowicki
+  github: wnowicki
 description: >- # this means to ignore newlines until "baseurl:"
-  Spotkania przy mikrofonie niczym przy piwie w czeskiej hospodzie: konkret, praktyka, zero zadęcia. Rozmowy o IT, zarządzaniu, strategii, produktach, startupach i wszystkim, co dzieje się między deployem a KPI. Dla liderów technicznych, product ownerów i wszystkich, którzy łączą kod z biznesem.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://hospoda.tech" # the base hostname & protocol for your site, e.g. http://example.com
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
+  Spotkania przy mikrofonie niczym przy piwie w czeskiej hospodzie: konkret, praktyka, zero zadęcia. Rozmowy o IT, zarządzaniu, strategii, produktach, startupach i wszystkim, co dzieje się między deployem a KPI. Dla liderów technicznych, product ownerów i wszystkich, którzy łączą technologię z biznesem.
+keywords: IT, PHP, agile, oop, Raspberry Pi, photography, scrum, software development, software architecture, e-commerce, git, opensource
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://hospoda.tech" # the base hostname & protocol for your site
+default_background: "/assets/img/background.jpg"
 
-# Header Option
-# header: large
-
-sass:
-    style: compressed
-
-markdown: kramdown
-highlighter: rouge
-
+timezone: "Europe/Warsaw" # e.g. "America/New_York"
+# Build settings
 plugins:
-  - jekyll-feed
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-admin
+  - jemoji
+  - jekyll-archives
+  - jekyll-redirect-from
+  - jekyll-target-blank
+  - jekyll_version_plugin
+  - jekyll-toc
+markdown: kramdown
 
+permalink: :title
 paginate: 5
+paginate_path: episodes/:num/
+# page_excerpts: true
 
-navigation:
-    - title: Home
-      url: /
-    - title: About
-      url: /about
-    - title: Contact
-      url: /contact
+jekyll_admin:
+    homepage: "index"
+    hidden_links:
+      - datafiles
 
+# Personalisation
 social:
-    github: wnowicki
-    # twitter: brianmaierjr
-    # facebook: brianmaierjr
-    email: wnowicki@me.com
-    # linkedin: brianmaierjr
-    # youtube: RickAstleyYT
-    # tumblr: i-am-a-fish
+    spotify:
+        footer: true
+        url: https://open.spotify.com/show/63rDHoShb9uyRFW9oBLTBQ?si=S4mDfmdMTP6zPrUrMJJcwA
+        icon: fa-brands fa-spotify
+    apple-podcasts:
+        footer: true
+        url: https://podcasts.apple.com/pl/podcast/hospoda-tech/id1829767915
+        icon: fa-brands fa-apple
+    youtube:
+        footer: true
+        url: https://youtube.com/@HospodaTech
+        icon: fa-brands fa-youtube
+    twitter:
+        footer: true
+        url: https://x.com/HospodaTech
+        icon: fa-brands fa-twitter
+    bluesky:
+        footer: true
+        url: https://bsky.app/profile/hospoda.tech
+        icon: fa-brands fa-bluesky
+    facebook:
+        footer: true
+        url: https://www.facebook.com/HospodaTech
+        icon: fa-brands fa-facebook
+    linkedin:
+        footer: false
+        url: https://linkedin.com/
+        icon: fa-brands fa-linkedin
+    github:
+        footer: false
+        url: https://github.com/
+        icon: fa-brands fa-github
+    discord:
+        footer: false
+        url: https://discord.com/users/985806052354306059
+        icon: fa-brands fa-discord
 
-google_analytics: ""
 
-disqus:
-    # shortname: brianmaierjr
+languages:
+    pl:
+        flag: pl
+        name: Polski
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+  layout: archive
+  permalinks:
+    tag: 'tags/:name/'
+    category: 'categories/:name/'
+
+toc:
+  min_level: 2 # default: 1
+  max_level: 3 # default: 6
+
+jekyll_compose:
+  default_front_matter:
+    drafts:
+      subtitle:
+      post_id:
+      author:
+      categories:
+      heading_image:
+      language:
+      tags:
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

@@ -1,36 +1,37 @@
-<div class="footer">
-	<div class="container">
-		<p class="copy">
-			&copy; {{ site.time | date: '%Y' }}
-			<a href="https://wojciechnowicki.com">Wojciech Nowicki</a> Powered by
-			<a href="http://jekyllrb.com">Jekyll</a> and <a href="https://long-haul.netlify.app/">Long Haul</a>
-		</p>
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center hidden-print">
+                    {% for social in site.social %}
+                        {% if social[1].footer == true %}
+                            <li>
+                                <a href="{{ social[1].url }}">
+                                    <span class="fa-stack fa-lg">
+                                        <i class="fa-solid fa-circle fa-stack-2x"></i>
+                                        <i class="{{ social[1].icon }} fa-stack-1x fa-inverse"></i>
+                                    </span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <p class="copyright text-muted">
+                  Copyright &copy; Hospoda.Tech {{ site.time | date: '%Y'}},
+                  <a href="{{ site.baseurl }}/credits">credits</a>
+                  [{% project_version commit short %}]
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
-		<div class="footer-links">
-			<ul class="noList">
-				{%- if site.social.facebook -%}
-					{%- include footer_links/facebook_icon.html -%}
-				{%- endif -%}
-				{%- if site.social.twitter -%}
-					{%- include footer_links/twitter_icon.html -%}
-				{%- endif -%}
-				{%- if site.social.linkedin -%}
-					{%- include footer_links/linkedin_icon.html -%}
-				{%- endif -%}
-				{%- if site.social.github -%}
-					{%- include footer_links/github_icon.html -%}
-				{%- endif -%}
-				{%- if site.social.tumblr -%}
-					{%- include footer_links/tumblr_icon.html -%}
-				{%- endif -%}
-				{%- if site.social.youtube -%}
-					{%- include footer_links/youtube_icon.html -%}
-				{%- endif -%}
-				{%- if site.social.email -%}
-					{%- include footer_links/email_icon.html -%}
-				{%- endif -%}
-			</ul>
-		</div>
-	</div>
-</div>
-<!-- end .footer -->
+<!-- jQuery -->
+<script src="{{ site.baseurl }}/assets/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="{{ site.baseurl }}/assets/js/clean-blog.min.js"></script>
