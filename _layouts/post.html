@@ -34,19 +34,25 @@ layout: default
             {% endif %}
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
+                {% if page.description %}
+                    <h2>Opis</h2>
+                    <p>{{ page.description }}</p>
+                {% endif %}
+
                 {% if page.spotify.id %}
+
                     {% include spotify.html id=page.spotify.id %}
                 {% endif %}
 
                 {{ content }}
 
                 <hr>
-                <ul class="list-inline"><li>Category:</li><li><a href="{{ site.baseurl }}/blog/categories/{{ page.categories | first }}"><strong>{{ page.categories | first | capitalize }}</strong></a></li></ul>
+                <ul class="list-inline"><li>Category:</li><li><a href="{{ site.baseurl }}/categories/{{ page.categories | first }}"><strong>{{ page.categories | first | capitalize }}</strong></a></li></ul>
                 {% if page.tags.size > 0 %}
                 <ul class="list-inline">
                     <li>Tags:</li>
                     {% for tag in page.tags %}
-                        <li><span class="label label-default"><a href="{{ site.baseurl }}/blog/tags/{{ tag }}">#{{ tag }} ({{ site.tags[tag]|size  }})</a></span></li>
+                        <li><span class="label label-default"><a href="{{ site.baseurl }}/tags/{{ tag }}">#{{ tag }} ({{ site.tags[tag]|size  }})</a></span></li>
                         <!-- <li><a href="/blog/tags#{{ tag }}" class="btn btn-default btn-xs">{{ tag }} <span class="badge">{{ site.tags[tag]|size  }}</span></a></li> -->
                     {% endfor %}
                 </ul>
@@ -55,12 +61,12 @@ layout: default
                 <ul class="pager hidden-print">
                     {% if page.previous.url %}
                     <li class="previous">
-                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Poprzedni odcinek</a>
                     </li>
                     {% endif %}
                     {% if page.next.url %}
                     <li class="next">
-                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Następny odcinek &rarr;</a>
                     </li>
                     {% endif %}
                 </ul>

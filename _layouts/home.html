@@ -20,11 +20,11 @@ layout: default
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
     {{ content }}
 
-    {% for post in site.posts limit : 5 %}
+    {% for post in site.posts limit : 3 %}
       {% include post_item.html post=post %}
 
       {% if forloop.last == false %}

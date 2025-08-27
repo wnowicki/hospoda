@@ -31,8 +31,8 @@ plugins:
 markdown: kramdown
 
 permalink: :title
-paginate: 5
-paginate_path: episodes/:num/
+paginate: 10
+paginate_path: episodes/:num
 # page_excerpts: true
 
 jekyll_admin:
