@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<!-- Page Header -->
+<!-- Set your background image for this header on the line below. -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}{% if page.heading_image %}{{ page.heading_image }}{% else %}{{ site.default_background }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="page-heading">
+                    {% if page.heading %}
+                        <h1>{{page.heading}}</h1>
+                        <hr class="small">
+                        <span class="subheading">{% if page.subheading %}{{ page.subheading }}{% else %}&nbsp;{% endif %}</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+    <div class="row">
+        {% if page.toc %}
+        <div class="hidden-lg col-sm-12 col-md-offset-1 col-md-10 hidden-print">
+            <div class="toc">
+                <h4>Table of Contents</h4>
+                {{ content | toc_only }}
+            </div>
+            <hr>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12">
+            {{ content }}
+        </div>
+        <div class="col-lg-2 hidden-xs hidden-sm hidden-md">
+            <div class="toc">
+                <h4>Table of Contents</h4>
+                {{ content | toc_only }}
+            </div>
+        </div>
+        {% else %}
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {{ content }}
+        </div>
+        {% endif %}
+    </div>
+</div>
