@@ -2,7 +2,13 @@
 <footer>
     <div class="container">
         <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
+            <p><div class="ml-embedded" data-form="Scn7af"></div></p>
+          </div>
+        </div>
+        <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>
                 <ul class="list-inline text-center hidden-print">
                     {% for social in site.social %}
                         {% if social[1].footer == true %}
@@ -17,6 +23,7 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
+                </p>
                 <p class="copyright text-muted">
                   Copyright &copy; Hospoda.Tech {{ site.time | date: '%Y'}},
                   <a href="{{ site.baseurl }}/credits">credits</a>
