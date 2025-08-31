@@ -13,7 +13,7 @@ on:
 
   schedule:
     # Runs every Tuesday at 19:05
-    cron: "5 19 * * 2"
+    - cron: "5 19 * * 2"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
