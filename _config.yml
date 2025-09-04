@@ -35,6 +35,10 @@ paginate: 10
 paginate_path: episodes/:num
 # page_excerpts: true
 
+collections:
+  people:
+    permalink: /ludzie/:name
+    output: true
 jekyll_admin:
     homepage: "index"
     hidden_links:

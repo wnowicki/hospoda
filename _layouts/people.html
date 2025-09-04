@@ -1,0 +1,13 @@
+---
+layout: page
+---
+
+{% for person in site.people %}
+  <h2>{{ person.name }}</h2>
+  <p>
+    <a href="{{ person.url }}">Szczegóły</a>
+    <ul>
+      <li>web: <a href="{{ person.www }}">{{ person.www }}</a></li>
+    </ul>
+  </p>
+{% endfor %}

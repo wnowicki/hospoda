@@ -39,6 +39,17 @@ layout: default
                     <p>{{ page.description }}</p>
                 {% endif %}
 
+                {% if page.people %}
+                    <h2>Osoby</h2>
+                    <ul>
+                      <li><a href="/ludzie/wnowicki">Wojciech Nowicki (host)</a></li>
+                    {% for person in page.people %}
+                        {% assign contributor = site.people | where: "code", person | first %}
+                        <li><a href="{{ contributor.url }}">{{ contributor.name }}</a></li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+
                 {% if page.spotify.id %}
 
                     {% include spotify.html id=page.spotify.id %}

@@ -1,0 +1,63 @@
+<ul class="list-unstyled hidden-print">
+  {% if page.email %}
+  <li>
+    <a href="mailto:{{ page.email }}">
+      <span class="fa-stack fa-lg">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-solid fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      Email
+    </a>
+  </li>
+  {% endif %}
+  {% if page.website %}
+  <li>
+    <a href="{{ page.website }}" target="_blank">
+      <span class="fa-stack fa-lg">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-solid fa-globe fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+  {% if page.linkedin %}
+  <li>
+    <a href="{{ page.linkedin }}" target="_blank">
+      <span class="fa-stack fa-lg">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-brands fa-linkedin fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+  {% if page.bluesky %}
+  <li>
+    <a href="{{ page.bluesky }}" target="_blank">
+      <span class="fa-stack fa-lg">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-brands fa-bluesky fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+  {% if page.twitter %}
+  <li>
+    <a href="{{ page.twitter }}" target="_blank">
+      <span class="fa-stack fa-lg">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+  {% if page.github %}
+  <li>
+    <a href="{{ page.github }}" target="_blank">
+      <span class="fa-stack fa-lg">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-brands fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+    </a>
+  </li>
+  {% endif %}
+</ul>
