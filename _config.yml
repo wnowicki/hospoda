@@ -37,7 +37,7 @@ paginate_path: episodes/:num
 
 collections:
   people:
-    permalink: /ludzie/:name
+    permalink: /osoby/:name
     output: true
 jekyll_admin:
     homepage: "index"

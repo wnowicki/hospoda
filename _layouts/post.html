@@ -42,10 +42,14 @@ layout: default
                 {% if page.people %}
                     <h2>Osoby</h2>
                     <ul>
-                      <li><a href="/ludzie/wnowicki">Wojciech Nowicki (host)</a></li>
+                      <li><a href="/osoby/wnowicki">Wojciech Nowicki (host)</a></li>
                     {% for person in page.people %}
                         {% assign contributor = site.people | where: "code", person | first %}
+                        {% if contributor %}
                         <li><a href="{{ contributor.url }}">{{ contributor.name }}</a></li>
+                        {% else %}
+                        <li>{{ person }}</li>
+                        {% endif %}
                     {% endfor %}
                     </ul>
                 {% endif %}

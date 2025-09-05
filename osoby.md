@@ -1,4 +1,4 @@
 ---
 layout: people
-permalink: /ludzie
+permalink: /osoby
 ---

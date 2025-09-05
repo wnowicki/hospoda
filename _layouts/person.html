@@ -25,30 +25,3 @@ layout: page
     {% endfor %}
     </ul>
 </div>
-<div class="clearfix"></div>
-
-
-
-{% capture odcinki %}
-  {% for post in site.posts %}
-    {% for person in post.people %}
-      {% if person == page.code %}
-        {{ post.id }}
-      {% endif %}
-    {% endfor %}
-  {% endfor %}
-{% endcapture %}
-
-{% assign odcinki = odcinki | split: "," | sort_natural %}
-
-<ul>
-  {% for odc in odcinki %}
-    <!-- <li><a href="{{ odc[0].url }}">{{ odc[0].title }}</a></li> -->
-     {{ odc | escape}}
-    {% assign post = site.posts | where: "id", odc | first %}
-    x
-     {{ post | escape }}
-  {% endfor %}
-</ul>
-
-
