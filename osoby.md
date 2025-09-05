@@ -1,0 +1,4 @@
+---
+layout: people
+permalink: /osoby
+---

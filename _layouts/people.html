@@ -1,0 +1,10 @@
+---
+layout: page
+---
+
+<h2>Osoby</h2>
+<ul>
+{% for person in site.people %}
+  <li><a href="{{ person.url }}">{{ person.name }}</a></li>
+{% endfor %}
+</ul>

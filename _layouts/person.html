@@ -1,0 +1,27 @@
+---
+layout: page
+---
+<div class="row">
+  <div class="col-md-3">
+    {% if page.gravatar or true %}
+    <img src="https://gravatar.com/avatar/{{ page.gravatar }}?s=150&d=initials&name={{ page.name | url_encode }}" alt="{{ page.name }}" class="img-circle">
+    {% endif %}
+    {% include person_social.html %}
+  </div>
+  <div class="col-md-9">
+    <h2>{{ page.name }}</h2>
+    {{ content }}
+    <h3>Odcinki</h3>
+    <ul>
+    {% for post in site.posts %}
+      {% for person in post.people %}
+        {% if person == page.code %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      {% if post.host == page.code %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a> (host)</li>
+      {% endif %}
+    {% endfor %}
+    </ul>
+</div>
