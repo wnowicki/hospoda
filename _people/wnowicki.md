@@ -11,6 +11,5 @@ github: https://github.com/wnowicki
 twitter: https://x.com/wonowicki
 bluesky: https://bsky.app/profile/wnowicki.bsky.social
 ---
-## Bio
 
 Innowacyjny lider technologiczny z ponad 15-letnim doświadczeniem w AI, architekturze systemów i zarządzaniu zespołami R&D. Łączę wiedzę techniczną z biznesowym spojrzeniem, tworząc rozwiązania, które wspierają automatyzację, analitykę i rozwój strategiczny firm. Pasjonuję się łączeniem technologii, innowacji i realnych potrzeb biznesu.
