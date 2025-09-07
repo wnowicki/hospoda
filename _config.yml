@@ -139,6 +139,7 @@ logo: /assets/img/hospoda-logo-square.jpg
 defaults:
   - scope:
       path: ""
+      type: "pages"
     values:
       image: /assets/img/background.jpg
 
