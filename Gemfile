@@ -34,4 +34,5 @@ group :jekyll_plugins do
     gem 'jekyll-compose'
     gem 'jekyll_version_plugin'
     gem 'jekyll-toc'
+    gem 'jekyll-og-image'
 end

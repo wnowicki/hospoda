@@ -28,6 +28,7 @@ plugins:
   - jekyll-target-blank
   - jekyll_version_plugin
   - jekyll-toc
+  - jekyll-og-image
 markdown: kramdown
 
 permalink: :title
@@ -39,6 +40,7 @@ collections:
   people:
     permalink: /osoby/:name
     output: true
+
 jekyll_admin:
     homepage: "index"
     hidden_links:
@@ -113,7 +115,26 @@ jekyll_compose:
       language:
       tags:
 
-# jekyll-seo-tag
+# Plugin: jekyll-og-image
+og_image:
+  collections: ["posts", "people"]
+  output_dir: /assets/img/og
+  domain: "hospoda.tech"
+  image: /assets/img/hospoda-logo-square.jpg
+  header:
+    font_family: "Roboto, Bold"
+    color: "#FFFFFF"
+  content:
+    font_family: "Roboto, Bold"
+    color: "#FFFFFF"
+  canvas:
+    background_image: "/assets/img/background.jpg"
+  border_bottom:
+    width: 20
+    fill:
+      - "#ff7800"
+
+# Plugin: jekyll-seo-tag
 logo: /assets/img/hospoda-logo-square.jpg
 defaults:
   - scope:
