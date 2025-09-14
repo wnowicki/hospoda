@@ -39,7 +39,7 @@ layout: default
                         <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}" class="btn btn-default btn-md"><span class="fa-stack fa-sm"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-arrow-left fa-stack-1x fa-inverse"></i></span> Poprzedni odcinek</a>
                     </li>
                     {% endif %}
-                    <li><a href="/odcinki" data-toggle="tooltip" data-placement="top" title="" class="btn btn-default btn-md"><span class="fa-stack fa-sm"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-arrow-up fa-stack-1x fa-inverse"></i></span></a></li>
+                    <li><a href="/episodes" data-toggle="tooltip" data-placement="top" title="" class="btn btn-default btn-md"><span class="fa-stack fa-sm"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-arrow-up fa-stack-1x fa-inverse"></i></span></a></li>
                     {% if page.next.url %}
                     <li>
                         <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}" class="btn btn-default btn-md">Następny odcinek <span class="fa-stack fa-sm"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-arrow-right fa-stack-1x fa-inverse"></i></span></a>
@@ -71,6 +71,17 @@ layout: default
                     {% include spotify.html id=page.spotify.id %}
                 {% endif %}
 
+                <ul class="list-inline text-center hidden-print">
+                  {% if page.spotify.url %}
+                    <li><a href="{{ page.spotify.url }}" class="btn btn-default btn-md"><span class="fa-stack"><i class="fa-brands fa-spotify fa-stack-2x"></span></i> Słuchaj w Spotify</a></li>
+                  {% endif %}
+                  {% if page.apple.url %}
+                    <li><a href="{{ page.apple.url }}" class="btn btn-default btn-md"><span class="fa-stack"><i class="fa-brands fa-apple fa-stack-2x"></span></i> Słuchaj w Apple Podcasts</a></li>
+                  {% endif %}
+                  {% if page.youtube.url %}
+                    <li><a href="{{ page.youtube.url }}" class="btn btn-default btn-md"><span class="fa-stack"><i class="fa-brands fa-youtube fa-stack-2x"></span></i> Oglądaj na YouTube</a></li>
+                  {% endif %}
+                </ul>
                 {{ content }}
 
                 <hr>
