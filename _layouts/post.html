@@ -33,6 +33,19 @@ layout: default
             </div>
             {% endif %}
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center hidden-print">
+                    {% if page.previous.url %}
+                    <li>
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}" class="btn btn-default btn-md"><span class="fa-stack fa-sm"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-arrow-left fa-stack-1x fa-inverse"></i></span> Poprzedni odcinek</a>
+                    </li>
+                    {% endif %}
+                    <li><a href="/odcinki" data-toggle="tooltip" data-placement="top" title="" class="btn btn-default btn-md"><span class="fa-stack fa-sm"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-arrow-up fa-stack-1x fa-inverse"></i></span></a></li>
+                    {% if page.next.url %}
+                    <li>
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}" class="btn btn-default btn-md">Następny odcinek <span class="fa-stack fa-sm"><i class="fa-solid fa-circle fa-stack-2x"></i><i class="fa-solid fa-arrow-right fa-stack-1x fa-inverse"></i></span></a>
+                    </li>
+                    {% endif %}
+                </ul>
 
                 {% if page.description %}
                     <h2>Opis</h2>
@@ -55,7 +68,6 @@ layout: default
                 {% endif %}
 
                 {% if page.spotify.id %}
-
                     {% include spotify.html id=page.spotify.id %}
                 {% endif %}
 
