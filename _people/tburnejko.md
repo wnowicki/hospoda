@@ -4,7 +4,7 @@ code: tburnejko
 name: Tomasz Burnejko
 title: Tomasz Burnejko
 email: tmburnejko@gmail.com
-gravatar: https://gravatar.com/sharksoftly68962cc1dd
+gravatar: fe69273d6594d35bd72f22fba4a3ecab7445a6348c4ebb127508e1bd68808901
 website: 
 linkedin: https://www.linkedin.com/in/tomasz-burnejko-83b4ab221/
 github: https://github.com/TomaszBurnejko
