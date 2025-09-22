@@ -141,7 +141,7 @@ defaults:
       path: ""
       type: "pages"
     values:
-      image: /assets/img/background.jpg
+      image: /assets/img/og-main.jpg
 
 # Exclude from processing.
 # The following items will not be processed, by default.
