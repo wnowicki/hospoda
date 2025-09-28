@@ -73,8 +73,8 @@ social:
         url: https://www.facebook.com/HospodaTech
         icon: fa-brands fa-facebook
     linkedin:
-        footer: false
-        url: https://linkedin.com/
+        footer: true
+        url: https://www.linkedin.com/company/hospoda-tech
         icon: fa-brands fa-linkedin
     github:
         footer: false
