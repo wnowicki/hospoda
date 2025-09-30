@@ -59,7 +59,7 @@ layout: default
                     {% for person in page.people %}
                         {% assign contributor = site.people | where: "code", person | first %}
                         {% if contributor %}
-                        <li><a href="{{ contributor.url }}">{{ contributor.name }}</a></li>
+                        <li><a href="{{ contributor.url }}">{{ contributor.name | prepend: contributor.prefix }}</a></li>
                         {% else %}
                         <li>{{ person }}</li>
                         {% endif %}
