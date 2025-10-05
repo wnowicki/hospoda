@@ -35,4 +35,5 @@ group :jekyll_plugins do
     gem 'jekyll_version_plugin'
     gem 'jekyll-toc'
     gem 'jekyll-og-image'
+    gem 'jekyll-twitter-plugin'
 end

@@ -29,6 +29,7 @@ plugins:
   - jekyll_version_plugin
   - jekyll-toc
   - jekyll-og-image
+  - jekyll-twitter-plugin
 markdown: kramdown
 
 permalink: :title

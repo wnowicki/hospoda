@@ -27,7 +27,7 @@ h6 {
   font-weight: 800;
 }
 a {
-  color: rgb(255, 120, 0);
+  color: #ff7800;
 }
 a:hover,
 a:focus {
@@ -66,6 +66,9 @@ hr.small {
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 1px;
+}
+.twitter-tweet {
+    margin: auto !important;
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
