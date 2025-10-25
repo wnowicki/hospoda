@@ -2,6 +2,15 @@
 layout: page
 ---
 <div class="row">
+  <div class="col-md-12">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><a href="/osoby">Osoby</a></li>
+      <li class="active">{{ page.name }}</li>
+    </ol>
+  </div>
+</div>
+<div class="row">
   <div class="col-md-3">
     {% if page.gravatar or true %}
     <img src="https://gravatar.com/avatar/{{ page.gravatar }}?s=150&d=initials&name={{ page.name | url_encode }}" alt="{{ page.name }}" class="img-circle">

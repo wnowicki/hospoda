@@ -70,6 +70,9 @@ hr.small {
 .twitter-tweet {
     margin: auto !important;
 }
+.breadcrumb {
+    margin-bottom: 30px;
+}
 @media only screen and (min-width: 768px) {
   .navbar-custom {
     background: transparent;
