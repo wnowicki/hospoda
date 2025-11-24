@@ -1,0 +1,5 @@
+{% if include.url %}
+<iframe id="ytplayer" type="text/html" width="720" height="405"
+src="{{ include.url }}?autoplay=0&origin={{ site.url }}"
+frameborder="0" allowfullscreen></iframe>
+{% endif %}

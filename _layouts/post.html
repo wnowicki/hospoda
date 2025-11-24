@@ -67,6 +67,10 @@ layout: default
                     </ul>
                 {% endif %}
 
+                {% if page.youtube.embeded %}
+                    {% include youtube.html url=page.youtube.embeded %}
+                {% endif %}
+
                 {% if page.spotify.id %}
                     {% include spotify.html id=page.spotify.id %}
                 {% endif %}
