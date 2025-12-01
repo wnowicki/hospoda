@@ -5,8 +5,8 @@ name: Mateusz Grużewski
 title: Mateusz Grużewski
 email:
 gravatar: 
-website: 
-linkedin:
+website: https://gruzewski.dev
+linkedin: https://www.linkedin.com/in/mateuszgruzewski
 github: 
 twitter:
 bluesky: 
