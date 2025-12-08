@@ -85,7 +85,10 @@ social:
         footer: false
         url: https://discord.com/users/985806052354306059
         icon: fa-brands fa-discord
-
+    instagram:
+        footer: true
+        url: https://www.instagram.com/hospoda.tech
+        icon: fa-brands fa-instagram
 
 languages:
     pl:
