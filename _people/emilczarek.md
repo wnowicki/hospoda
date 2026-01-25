@@ -5,7 +5,7 @@ name: Ewa Milczarek
 prefix: "dr "
 title: dr Ewa Milczarek
 email: ewa.milczarek@usz.edu.pl
-gravatar:
+gravatar: 4ad686d8f7b91b7976480e784c06e70f
 website:
 linkedin:
 github:
