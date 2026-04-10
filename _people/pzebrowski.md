@@ -4,7 +4,7 @@ code: pzebrowski
 name: Paweł Żebrowski
 title: Paweł Żebrowski
 email:
-gravatar: ad92d948e804f0fa4b13340d4459fba479bfbc61b14d043dd1aaddd71ef00328
+gravatar: f239f8341877c267ed2a017b4c46aca01a904f306b612d152eaa4fcca774d8ed
 website:
 linkedin: https://www.linkedin.com/in/pzebrowski
 github:
