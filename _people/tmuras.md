@@ -5,8 +5,8 @@ name: Tomasz Muras
 title: Tomasz Muras
 email:
 gravatar:
-website:
-linkedin:
+website: https://muras.eu
+linkedin: https://www.linkedin.com/in/tmuras
 github:
 twitter:
 bluesky:
